@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { FaStar } from "react-icons/fa";
+
 import {
   ProductContainer,
   ProductImage,
@@ -8,25 +11,25 @@ import {
   LinkSytled,
 } from "./styledComponents";
 
-import { RatingContainer, StarImage } from "../commonStyles";
+import { RatingContainer } from "../commonStyles";
+import AppContext from "../../context/appContext";
 
 const ProductItem = (props) => {
   const { productDetails } = props;
   const { id, image, price, rating, title } = productDetails;
+  const context = useContext(AppContext);
+  const { isdark } = context;
 
   return (
-    <ProductContainer>
+    <ProductContainer isdark={isdark}>
       <LinkSytled to={`/products/${id}`}>
-        <ProductImage src={image} alt="product" />
-        <ProductTitle>{title}</ProductTitle>
+        <ProductImage src={image} alt={title} />
+        <ProductTitle isdark={isdark}>{title}</ProductTitle>
         <PriceAndRatingContainer>
-          <Price>Rs {price}/-</Price>
-          <RatingContainer>
-            <Rating>{rating.rate}</Rating>
-            <StarImage
-              src="https://assets.ccbp.in/frontend/react-js/star-img.png"
-              alt="star"
-            />
+          <Price isdark={isdark}>Rs {price}/-</Price>
+          <RatingContainer isdark={isdark}>
+            <Rating isdark={isdark}>{rating.rate}</Rating>
+            <FaStar color={isdark ? "#000000" : "#ffffff"} />
           </RatingContainer>
         </PriceAndRatingContainer>
       </LinkSytled>

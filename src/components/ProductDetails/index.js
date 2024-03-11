@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { FaStar } from "react-icons/fa";
 
 import {
   ProductDetailsContainer,
@@ -11,15 +12,20 @@ import {
   Price,
 } from "./styledComponents";
 
-import { RatingContainer, StarImage } from "../commonStyles";
+import { RatingContainer } from "../commonStyles";
 import { Rating } from "../ProductItem/styledComponents";
 
 import Header from "../Header";
 import Loader from "../Loader";
 
+import AppContext from "../../context/appContext";
+
 const ProductDetails = (props) => {
   const [productDetails, setProductDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+
+  const context = useContext(AppContext);
+  const { isdark } = context;
 
   const getProductDetails = async () => {
     setIsLoading(true);
@@ -30,7 +36,6 @@ const ProductDetails = (props) => {
     const response = await fetch(url);
     if (response.ok === true) {
       const data = await response.json();
-      console.log(data);
       setProductDetails(data);
       setIsLoading(false);
     } else {
@@ -45,28 +50,32 @@ const ProductDetails = (props) => {
   return (
     <>
       <Header />
-      <ProductDetailsContainer>
+      <ProductDetailsContainer isdark={isdark}>
         {isLoading ? (
           <Loader />
         ) : (
-          <ProductDetailsCard>
-            <ProductDetailsImage src={productDetails.image} alt="product" />
+          <ProductDetailsCard isdark={isdark}>
+            <ProductDetailsImage
+              src={productDetails.image}
+              alt={productDetails.title}
+            />
             <div>
-              <ProductTitle>{productDetails.title}</ProductTitle>
-              <ProductDescription>
+              <ProductTitle isdark={isdark}>
+                {productDetails.title}
+              </ProductTitle>
+              <ProductDescription isdark={isdark}>
                 {productDetails.description}
               </ProductDescription>
               <RatingAndReviewsContainer>
-                <RatingContainer>
-                  <StarImage
-                    src="https://assets.ccbp.in/frontend/react-js/star-img.png"
-                    alt="star"
-                  />
-                  <Rating>{productDetails.rating?.rate}</Rating>
+                <RatingContainer isdark={isdark}>
+                  <FaStar color={isdark ? "#000000" : "#ffffff"} />
+                  <Rating isdark={isdark}>{productDetails.rating?.rate}</Rating>
                 </RatingContainer>
-                <Reviews>{productDetails.rating?.count} Reviews</Reviews>
+                <Reviews isdark={isdark}>
+                  {productDetails.rating?.count} Reviews
+                </Reviews>
               </RatingAndReviewsContainer>
-              <Price>Rs {productDetails.price}/-</Price>
+              <Price isdark={isdark}>Rs {productDetails.price}/-</Price>
             </div>
           </ProductDetailsCard>
         )}

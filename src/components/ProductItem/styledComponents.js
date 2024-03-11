@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ProductContainer = styled.li`
-  box-shadow: 0px 4px 16px 0px #bfbfbf;
   width: 250px;
   margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 15px;
   padding: 20px;
+  box-shadow: ${(props) =>
+    props.isdark ? "none" : "0px 4px 16px 0px #bfbfbf"};
+  background-color: ${(props) => (props.isdark ? "#000000" : "#ffffff")};
   @media screen and (max-width: 767px) {
     width: 45%;
   }
@@ -26,6 +28,7 @@ export const LinkSytled = styled(Link)`
 export const ProductImage = styled.img`
   width: 80%;
   height: 200px;
+  border-radius: 10px;
   align-self: center;
   @media screen and (max-width: 576px) {
     width: 60%;
@@ -36,7 +39,7 @@ export const ProductTitle = styled.p`
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  color: #000000;
+  color: ${(props) => (props.isdark ? "#ffffff" : "#000000")};
 `;
 
 export const PriceAndRatingContainer = styled.div`
@@ -49,12 +52,13 @@ export const PriceAndRatingContainer = styled.div`
 export const Price = styled.p`
   font-size: 16px;
   font-weight: 500;
-  color: midnightblue;
+  color: ${(props) => (props.isdark ? "#e3e1e1" : "midnightblue")};
 `;
 
 export const Rating = styled.p`
   font-size: 16px;
   color: #ffffff;
-  margin-right: 10px;
   font-weight: 500;
+  color: ${(props) => (props.isdark ? "#000000" : "#ffffff")};
+  margin-left: 5px;
 `;

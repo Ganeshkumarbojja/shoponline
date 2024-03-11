@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const ProductsContainer = styled.div`
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: ${(props) => (props.isdark ? "#171616" : "#ffffff")};
 `;
 
 export const ProductsList = styled.ul`
