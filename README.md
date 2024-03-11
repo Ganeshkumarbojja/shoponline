@@ -1,8 +1,8 @@
 # ShopOnline Webiste
 
-- It is a single page website consist of several routes such as home, products, productdetail allows us look at different products and filter the products based on the category.
+- It is a single-page application designed for shopping, consisting of several routes such as home, products, and product details. The application is designed with responsiveness in mind and allows for theme switching between light and dark modes.
 
-# Routes
+## Routes
 
 - Home
 
@@ -25,4 +25,7 @@
 ## Resources used
 
 - Images: [https://www.freepik.com/](https://www.freepik.com/)
+
 - Icons: [https://react-icons.github.io/react-icons/](https://react-icons.github.io/react-icons/)
+
+- Colors: [https://www.colorpicker.com/](https://www.colorpicker.com/)
