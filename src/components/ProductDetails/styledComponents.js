@@ -14,11 +14,18 @@ export const ProductDetailsCard = styled.div`
   display: flex;
   width: 90%;
   max-width: 1200px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 export const ProductDetailsImage = styled.img`
   width: 30%;
   margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    width: 90%;
+  }
 `;
 
 export const ProductTitle = styled.h1`
