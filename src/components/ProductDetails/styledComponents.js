@@ -13,6 +13,7 @@ export const ProductDetailsCard = styled.div`
   padding: 50px;
   display: flex;
   width: 90%;
+  max-width: 1200px;
 `;
 
 export const ProductDetailsImage = styled.img`
@@ -28,9 +29,23 @@ export const ProductTitle = styled.h1`
 export const ProductDescription = styled.p`
   font-size: 16px;
   line-height: 26px;
+  color: #787777;
 `;
 
 export const RatingAndReviewsContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const Reviews = styled.p`
+  font-size: 16px;
+  margin-left: 10px;
+  font-size: 400;
+  color: #787777;
+`;
+
+export const Price = styled.p`
+  font-size: 25px;
+  font-size: 600;
+  color: midnightblue;
 `;

@@ -35,9 +35,9 @@ export const PriceAndRatingContainer = styled.div`
 `;
 
 export const Price = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  color: #000000;
+  color: midnightblue;
 `;
 
 export const Rating = styled.p`

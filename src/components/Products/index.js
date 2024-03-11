@@ -8,7 +8,7 @@ import Header from "../Header";
 
 const Products = () => {
   const [productsList, setProductsList] = useState([]);
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const getProducts = async () => {
     const url = "https://fakestoreapi.com/products?sort=asc";
     setIsLoading(true);
@@ -25,9 +25,6 @@ const Products = () => {
     <>
       <Header />
       <ProductsContainer>
-        {/* <ProductsHeader>
-            <ProductsTitle>Products</ProductsTitle>
-        </ProductsHeader> */}
         {isLoading ? (
           <Loader />
         ) : (

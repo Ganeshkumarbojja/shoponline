@@ -13,4 +13,5 @@ export const ProductsList = styled.ul`
   width: 90%;
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
 `;
