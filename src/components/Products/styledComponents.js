@@ -44,7 +44,7 @@ export const FilterLabel = styled.label`
 `;
 
 export const ProductsTitle = styled.h1`
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 500;
   color: ${(props) => (props.isdark ? "#ffffff" : "#000000")};
 `;
