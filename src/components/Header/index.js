@@ -1,6 +1,6 @@
 import { AppHeader, AppTitle } from "./styledComponents";
 
-import { LinkSytled } from "../ProductItem/styledComponents";
+import { LinkSytled } from "./styledComponents";
 
 const Header = () => (
   <AppHeader>

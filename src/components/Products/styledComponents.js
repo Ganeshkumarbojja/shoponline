@@ -14,4 +14,7 @@ export const ProductsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
+  @media screen and (max-width: 576px) {
+    justify-content: center;
+  }
 `;

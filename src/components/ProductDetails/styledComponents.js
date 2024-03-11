@@ -25,6 +25,7 @@ export const ProductDetailsImage = styled.img`
   margin-right: 50px;
   @media screen and (max-width: 767px) {
     width: 90%;
+    margin-bottom: 30px;
   }
 `;
 

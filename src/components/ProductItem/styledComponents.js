@@ -8,17 +8,28 @@ export const ProductContainer = styled.li`
   margin-bottom: 20px;
   border-radius: 15px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  @media screen and (max-width: 767px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 576px) {
+    width: 80%;
+  }
 `;
 
 export const LinkSytled = styled(Link)`
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;
 
 export const ProductImage = styled.img`
   width: 80%;
   height: 200px;
+  align-self: center;
+  @media screen and (max-width: 576px) {
+    width: 60%;
+  }
 `;
 
 export const ProductTitle = styled.p`
@@ -32,6 +43,7 @@ export const PriceAndRatingContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Price = styled.p`

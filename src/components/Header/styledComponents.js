@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const AppHeader = styled.nav`
   display: flex;
@@ -13,4 +14,8 @@ export const AppTitle = styled.p`
   font-family: "Caveat";
   font-weight: 600;
   color: midnightblue;
+`;
+
+export const LinkSytled = styled(Link)`
+  text-decoration: none;
 `;
