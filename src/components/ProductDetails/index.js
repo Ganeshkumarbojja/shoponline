@@ -10,6 +10,7 @@ import {
   RatingAndReviewsContainer,
   Reviews,
   Price,
+  AddtoCartBtn,
 } from "./styledComponents";
 
 import { RatingContainer } from "../commonStyles";
@@ -25,7 +26,7 @@ const ProductDetails = (props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const context = useContext(AppContext);
-  const { isdark } = context;
+  const { isdark, setCartItem } = context;
 
   const getProductDetails = async () => {
     setIsLoading(true);
@@ -38,6 +39,7 @@ const ProductDetails = (props) => {
       const data = await response.json();
       setProductDetails(data);
       setIsLoading(false);
+      console.log(productDetails);
     } else {
       console.log("Error fetching data");
     }
@@ -46,6 +48,11 @@ const ProductDetails = (props) => {
   useEffect(() => {
     getProductDetails();
   }, []);
+
+  const onAddtoCart = () => {
+    console.log(productDetails);
+    setCartItem((prev) => [...prev, productDetails]);
+  };
 
   return (
     <>
@@ -76,6 +83,9 @@ const ProductDetails = (props) => {
                 </Reviews>
               </RatingAndReviewsContainer>
               <Price isdark={isdark}>Rs {productDetails.price}/-</Price>
+              <AddtoCartBtn type="button" onClick={onAddtoCart}>
+                Add to Cart
+              </AddtoCartBtn>
             </div>
           </ProductDetailsCard>
         )}

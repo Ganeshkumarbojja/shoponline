@@ -28,7 +28,7 @@ const ProductItem = (props) => {
         <PriceAndRatingContainer>
           <Price isdark={isdark}>Rs {price}/-</Price>
           <RatingContainer isdark={isdark}>
-            <Rating isdark={isdark}>{rating.rate}</Rating>
+            <Rating isdark={isdark}>{rating?.rate}</Rating>
             <FaStar color={isdark ? "#000000" : "#ffffff"} />
           </RatingContainer>
         </PriceAndRatingContainer>

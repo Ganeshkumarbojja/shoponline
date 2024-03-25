@@ -64,3 +64,13 @@ export const Price = styled.p`
   font-size: 600;
   color: ${(props) => (props.isdark ? "#e3e1e1" : "midnightblue")};
 `;
+
+export const AddtoCartBtn = styled.button`
+  background-color: midnightblue;
+  color: #ffffff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 10;
+`;
