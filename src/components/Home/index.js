@@ -23,7 +23,7 @@ const Home = () => {
       <HomeContainer isdark={isdark}>
         <HomeCard isdark={isdark}>
           <div>
-            <HomeTitle isdark={isdark}>Welcome to ShopOnline</HomeTitle>
+            <HomeTitle isdark={isdark}>Welcome to My Shop</HomeTitle>
             <HomeDescription isdark={isdark}>
               Shop the latest trends in fashion, electronics, and home decor at
               ShopOnline. Enjoy easy navigation, secure transactions, and fast
