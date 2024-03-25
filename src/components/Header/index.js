@@ -26,7 +26,7 @@ const Header = () => {
           <MdDarkMode size={25} color="#000000" />
         )}
       </ThemeBtn>
-      <LinkSytled>Cart</LinkSytled>
+      <LinkSytled to="/cart">Cart</LinkSytled>
     </AppHeader>
   );
 };
