@@ -29,13 +29,19 @@ const Header = () => {
       </LinkStyled>
       <NavLinks>
         <li>
-          <LinkStyledNav to="/">Home</LinkStyledNav>
+          <LinkStyledNav isdark={isdark} to="/">
+            Home
+          </LinkStyledNav>
         </li>
         <li>
-          <LinkStyledNav to="/products">Products</LinkStyledNav>
+          <LinkStyledNav isdark={isdark} to="/products">
+            Products
+          </LinkStyledNav>
         </li>
         <li>
-          <LinkStyledNav to="/cart">Cart</LinkStyledNav>
+          <LinkStyledNav isdark={isdark} to="/cart">
+            Cart
+          </LinkStyledNav>
         </li>
         <li>
           <ThemeBtn type="button" onClick={onTheme}>

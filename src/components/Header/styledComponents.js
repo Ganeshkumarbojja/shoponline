@@ -10,6 +10,11 @@ export const AppHeader = styled.nav`
   padding-left: 50px;
   padding-right: 50px;
   background-color: ${(props) => (props.isdark ? "#000000" : "#ffffff")};
+
+  @media screen and (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 export const AppTitle = styled.p`
@@ -42,4 +47,8 @@ export const LinkStyledNav = styled(Link)`
   text-decoration: none;
   font-weight: 400;
   margin-right: 20px;
+  color: ${(props) => (props.isdark ? "#e3e1e1" : "#787777")};
+  @media screen and (max-width: 767px) {
+    margin-right: 10px;
+  }
 `;
