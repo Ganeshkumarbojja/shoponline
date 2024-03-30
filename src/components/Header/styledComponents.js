@@ -20,7 +20,7 @@ export const AppTitle = styled.p`
   color: ${(props) => (props.isdark ? "#ffffff" : "midnightblue")};
 `;
 
-export const LinkSytled = styled(Link)`
+export const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 
@@ -29,4 +29,17 @@ export const ThemeBtn = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
+`;
+
+export const NavLinks = styled.ul`
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+`;
+
+export const LinkStyledNav = styled(Link)`
+  text-decoration: none;
+  font-weight: 400;
+  margin-right: 20px;
 `;

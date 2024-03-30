@@ -22,11 +22,13 @@ const Products = () => {
   const [isLoading, setIsLoading] = useState(false);
   const context = useContext(AppContext);
   const { isdark } = context;
-  const getProducts = async () => {
-    let categoriesPath = "";
+
+  let categoriesPath = "";
     if (activeCategory !== "") {
       categoriesPath = `category/${activeCategory}`;
     }
+  const getProducts = async () => {
+    
     const productsUrl = `https://fakestoreapi.com/products/${categoriesPath}?sort=asc`;
     setIsLoading(true);
     const productsResponse = await fetch(productsUrl);
